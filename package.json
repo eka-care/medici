@@ -14,7 +14,7 @@
     "bench:ledger": "ts-node ./bench/bench-ledger.ts",
     "build": "npm run clean && npm run build:node && npm run build:types",
     "build:node": "tsc -p .",
-    "build:types": "dts-bundle-generator -o ./types/index.d.ts ./src/index.ts --project ./tsconfig.types.json --no-check",
+    "build:types": "dts-bundle-generator -o ./types/index.d.ts ./src/index.ts --project ./tsconfig.types.json --no-check --external-imports mongoose",
     "clean": "rimraf ./build && rimraf ./types",
     "prettier": "prettier '**/*.ts' --check",
     "prettier:fix": "prettier '**/*.ts' --write",
@@ -99,5 +99,8 @@
   },
   "engines": {
     "node": ">=16"
+  },
+  "overrides": {
+    "bson": "^5.5.1"
   }
 }
