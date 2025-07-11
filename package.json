@@ -24,7 +24,8 @@
     "test:code": "ts-mocha --recursive './spec/*.ts' --preserve-symlinks",
     "test:types": "tsd",
     "test:coverage": "npm run clean && USE_MEMORY_REPL_SET=true nyc --reporter html ts-mocha --recursive './spec/**/*.spec.ts'",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "postinstall": "node scripts/patch-mongoose.js"
   },
   "files": [
     "build/",
@@ -51,7 +52,7 @@
     "url": "https://github.com/flash-oss/medici/issues"
   },
   "dependencies": {
-    "mongoose": "5 - 8"
+    "mongoose": "^8.9.5"
   },
   "homepage": "https://github.com/flash-oss/medici",
   "devDependencies": {
@@ -81,7 +82,7 @@
     "sinon": "^15.1.0",
     "ts-mocha": "^10.0.0",
     "tsd": "^0.28.1",
-    "typescript": "^5.1.3"
+    "typescript": "^5.8.3"
   },
   "tsd": {
     "directory": "spec/types",
