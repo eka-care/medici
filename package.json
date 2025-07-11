@@ -52,6 +52,7 @@
     "url": "https://github.com/flash-oss/medici/issues"
   },
   "dependencies": {
+    "bson": "^5.5.1",
     "mongoose": "5 - 8"
   },
   "homepage": "https://github.com/flash-oss/medici",
@@ -101,7 +102,6 @@
     "node": ">=16"
   },
   "overrides": {
-    "bson": "^5.5.1",
     "mongodb": "^5.5.0"
   }
 }
