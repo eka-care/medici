@@ -51,6 +51,7 @@
     "url": "https://github.com/flash-oss/medici/issues"
   },
   "dependencies": {
+    "mongodb": "^4.17.2",
     "mongoose": "5 - 8"
   },
   "homepage": "https://github.com/flash-oss/medici",
